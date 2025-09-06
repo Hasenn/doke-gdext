@@ -99,9 +99,9 @@ dependencies = [
 
 [[package]]
 name = "doke"
-version = "0.2.2"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "41b3501916af0e6a1894f05908227ffa6285ff142305788979eed7a9a5daf22c"
+checksum = "b77589917559bd872809ee6628e575f8b0fa60ff7827ea940f53103c188194c7"
 dependencies = [
  "glob",
  "hashlink",
