@@ -226,7 +226,30 @@ And now I can chain effects !
 
 ...
 
-No, this fails horribly. 
+No, this fails horribly. To "chain Effects", you would prefer (when using this "easy" parser style) to do this in Item.dokeconfig.yaml :
+
+```yaml
+rules:
+  - for: ItemModifier
+    parser: "**/*ItemModifier.dokedef.yaml"
+    children: [ItemEffect]
+
+```
+
+This will enable a **component-like** structure. You can also use multiple children mappings with names that collect different abstract types.
+This currently does not support checking for a single child or all the sugar that is in the root's children. Low priority right now.
+
+```yaml
+rules:
+  - for: ActionComponent
+    parser : "**/*ActionComponent.dokedef.yaml"
+    children: 
+      - components : [ActionComponent]
+      - visuals : [Visuals]
+
+
+```
+
 
 Grammars, which would allow this, typically require some care to make, and tooling to make them often absolutely requires that this is done at compile-time. 
 
