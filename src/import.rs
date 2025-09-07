@@ -178,7 +178,6 @@ pub fn build_top_level_resource(
 // -----------------------
 
 const APPLY_DOKE_FM_METHOD: &str = "_apply_doke_frontmatter";
-const APPLY_ROOT_DOKE_FM_METHOD: &str = "_apply_root_doke_frontmatter";
 // -----------------------
 // Apply frontmatter: call `_apply_doke_frontmatter` on the resource if it exists
 // -----------------------
@@ -187,7 +186,7 @@ fn apply_doke_frontmatter_if_exists(
     frontmatter: &HashMap<String, GodotValue>,
 ) -> Result<()> {
     resource.call(
-        APPLY_ROOT_DOKE_FM_METHOD,
+        APPLY_DOKE_FM_METHOD,
         &[convert_fm_to_godot(frontmatter)?],
     );
     Ok(())
