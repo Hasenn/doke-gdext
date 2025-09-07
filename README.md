@@ -200,7 +200,7 @@ The Right hand side of a rule defaults to the section target, so it was implied 
 
 #### Right hand side
 
-The right hand side of a value can be:
+The right hand side of a rule can be:
 
 - A type of resource if it is an identifier in a string (no funny characters) : `StatModifier`
 - A string literal, or a formatted string : `l"Literally a string"` `f"you can {format}, yay !"`. Formatted string draw first from the left hand side basic values, then from the frontmatter.
